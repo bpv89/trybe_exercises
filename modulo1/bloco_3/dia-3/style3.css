@@ -1,0 +1,15 @@
+h1, p{
+    text-align: center;
+}
+ol{
+    background-color:  blue;
+}
+li:hover{
+    background-color: green;
+}
+li:active{
+    font-family: 'Lucida Sans', sans-serif;
+}
+.listas {
+    list-style: none;
+}
