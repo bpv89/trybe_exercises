@@ -31,9 +31,11 @@ for (index =0; index < meusNumeros.length; index +=1) {
         }
     }
 }
-console.log(meusNumeros);
-console.log(numerosSorteados);
-console.log(acertos);
+
+// Imprime os numeros escolhidos, os sorteados e o numero de acertos
+console.log('Meus números: ', meusNumeros);
+console.log('Números sorteados: ', numerosSorteados);
+console.log('Número de acertos: ', acertos);
 
 
 
