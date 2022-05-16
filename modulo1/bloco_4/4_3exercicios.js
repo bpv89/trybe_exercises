@@ -215,3 +215,23 @@ for (let linha = 1; linha <= Math.floor(piramideVazia/2) +1;  linha +=1) {
     piramideImpressoVazia = '';
 }
 
+// 6- Faça um programa que diz se um número definido numa variável é primo ou não.
+// Um número primo é um número que só é divisível por 1 e por ele mesmo, ou seja, a divisão dele com quaisquer outros números dá resto diferente de zero.
+// Dica: você vai precisar de fazer um loop que vá de 0 ao número definido; Além disso, vai precisar de fazer uma checagem a cada iteração e armazenar os resultados em algum lugar.
+
+let numeroDefinido = -10;
+let divisores =0;
+for (let index = 1; index < numeroDefinido; index +=1){
+    if ( numeroDefinido % index == 0){
+        divisores +=1;
+    }
+}
+if (divisores > 2) {
+    console.log(numeroDefinido, 'não é primo');
+} else if (numeroDefinido == 0) {
+    console.log('Com zero é complicado');
+} else if (numeroDefinido < 0) {
+    console.log('O calculo apenas funciona para numero positivos e inteiros');
+} else {
+    console.log(numeroDefinido, 'é primo');
+}
