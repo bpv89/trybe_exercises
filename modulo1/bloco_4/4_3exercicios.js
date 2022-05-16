@@ -180,3 +180,38 @@ for (let linha = 1; linha <= linhas;  linha +=1) {
     console.log(piramideImpresso);
     piramideImpresso = '';
 }
+
+// 5- Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
+// Copiar
+// Por último, façamos com que a variável seja incrementada com o valor correspondente a cada loop;
+// n = 7
+
+//    *
+//   * *
+//  *   *
+// *******
+
+let piramideVazia = 7;
+let piramideImpressoVazia = '';
+let beging, ending;
+
+for (let linha = 1; linha <= Math.floor(piramideVazia/2) +1;  linha +=1) {
+    if (linha != Math.floor(piramideVazia/2) +1) {
+        beging = 1+ (piramideVazia - 2 * linha -1) /2;
+        ending = piramideVazia - (piramideVazia - 2 * linha -1) /2;
+        for (let coluna = 1; coluna <= piramideVazia; coluna += 1) {
+            if ( coluna  == beging +1 || coluna  == ending -1) {
+                piramideImpressoVazia += '*';
+            } else {
+                piramideImpressoVazia += ' ';
+            }
+        }
+    } else {
+        for ( let index =0; index < piramideVazia; index +=1 ){
+            piramideImpressoVazia += '*';
+        }
+    }
+    console.log(piramideImpressoVazia);
+    piramideImpressoVazia = '';
+}
+
