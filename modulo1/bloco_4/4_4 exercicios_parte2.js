@@ -183,4 +183,19 @@ function romanos(a){
 return somatório;
 }
 
-console.log(romanos('IV'));
+
+// 2 - Crie uma função chamada arrayOfNumbers que receberá a variável vector como parâmetro. Através de um loop for, percorra essa variável, busque os números pares e os adicione a um novo array que deverá ser retornado ao final pela pela função.
+
+function arrayOfNumbers(vector) {
+    let resultado = [];
+    for (let run of vector){        
+        for (let numeros of run){
+            if (numeros % 2 == 0){
+                resultado.push(numeros);
+            }
+        }
+
+    }
+return resultado
+}
+
