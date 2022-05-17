@@ -44,3 +44,4 @@ for (let index in info) {
             console.log( info[index] + ' e ' + info2[index]);
     }
 }
+
