@@ -14,3 +14,10 @@ console.log('Bem-vinda, ' + info.personagem);
 
 info['recorrente'] = 'Sim'
 
+// 3 - Faça um for/in que mostre todas as chaves do objeto. Valor esperado no console:
+
+for (let index in info) {
+    console.log(index);
+}
+
+
