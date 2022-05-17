@@ -28,14 +28,40 @@ function verificaPalindrome(a) {
 // Valor esperado no retorno da função: 4.
 
 function indiceDoMaior(a) {
-    let maiorNumero, indice;
-    for (let index =0; index < a.length -2; index +=1) {
+    let maiorNumero =0, indice, tempMaiorNumero, tempIndice;
+    for (let index =0; index < a.length -1; index +=1) {
         if (a[index] > a[index+1]) {
-            maiorNumero = a[index];
-            indice = index;
+            tempMaiorNumero = a[index];
+            tempIndice = index;
         } else {
-            maiorNumero = a[index+1]
-            indice = index +1
+            tempMaiorNumero = a[index+1]
+            tempIndice = index +1
+        }
+        if (tempMaiorNumero > maiorNumero) {
+            maiorNumero = tempMaiorNumero
+            indice = tempIndice
+        }
+    }
+    return indice;
+}
+
+// 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+// Array de teste: [2, 4, 6, 7, 10, 0, -3];.
+// Valor esperado no retorno da função: 6.
+
+function indiceDoMenor(a) {
+    let menorNumero = Number.MAX_SAFE_INTEGER, indice, tempMenorNumero, tempIndice;
+    for (let index =0; index < a.length -1; index +=1) {
+        if (a[index] < a[index+1]) {
+            tempMenorNumero = a[index];
+            tempIndice = index;
+        } else {
+            tempMenorNumero = a[index+1]
+            tempIndice = index +1
+        }
+        if (tempMenorNumero < menorNumero) {
+            menorNumero = tempMenorNumero
+            indice = tempIndice
         }
     }
     return indice;
