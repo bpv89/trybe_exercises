@@ -151,3 +151,36 @@ return resultado
 }
 
 
+// BÔNUS 
+
+
+// 1 - (Difícil) Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
+
+function romanos(a){
+    let valor = [];
+    let somatório =0;
+    let romanos = {
+        I: 1,
+        V: 5,
+        X: 9,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000,    
+    }
+    let numero = a.split('');
+    for ( let index = 0; index < numero.length; index += 1) {
+        valor[index] = romanos[numero[index]];
+    }
+    for (let index = 0; index < numero.length; index +=1) {
+        if (valor[index] < valor[index +1]) {
+            somatório -= valor[index];
+        } else {
+            somatório += valor[index];
+        }
+
+    }
+return somatório;
+}
+
+console.log(romanos('IV'));
