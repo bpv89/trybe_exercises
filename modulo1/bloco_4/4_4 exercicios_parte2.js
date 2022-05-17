@@ -231,4 +231,53 @@ const basket = [
     'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
     'Banana', 'Pera', 'Abacate', 'Uva',
   ];
-  console.log(contadorDeFrutas(basket));
+
+
+  let moradores = {
+    blocoUm: [
+      {
+        nome: 'Luiza',
+        sobrenome: 'Guimarães',
+        andar: 10,
+        apartamento: 1005,
+      },
+      {
+        nome: 'William',
+        sobrenome: 'Albuquerque',
+        andar: 5,
+        apartamento: 502,
+      },
+    ],
+    blocoDois: [
+      {
+        nome: 'Murilo',
+        sobrenome: 'Ferraz',
+        andar: 8,
+        apartamento: 804,
+      },
+      {
+        nome: 'Zoey',
+        sobrenome: 'Brooks',
+        andar: 1,
+        apartamento: 101,
+      },
+    ],
+  };
+
+  function acharMorador( morador, bloco, posicao) {
+      console.log('O morador do bloco 2 de nome ' + morador[bloco][posicao].nome + ' ' + morador[bloco][posicao].sobrenome + ' mora no ' + morador[bloco][posicao].andar +'º andar, apartamento ' + morador[bloco][posicao].apartamento + '.');
+  }
+
+//   5 - Utilize o for para imprimir o nome completo de todos os moradores do bloco 1, acessando suas chaves nome e sobrenome, depois faça o mesmo para os moradores do bloco 2.
+
+function nomesDosMoradores (moradores) {
+    for (let index in moradores) {  
+            console.log(index);          
+            for ( let indice = 0; indice < Object.keys(moradores).length; indice += 1) {
+            console.log(moradores[index][indice].nome + ' ' + moradores[index][indice].sobrenome);
+            }
+        }
+    }
+
+
+nomesDosMoradores(moradores);
