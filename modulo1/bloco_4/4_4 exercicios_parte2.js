@@ -86,3 +86,31 @@ function maiorNome(a) {
         }
         return maiorNome;
 }
+
+// 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+// Array de teste: [2, 3, 2, 5, 8, 2, 3];.
+// Valor esperado no retorno da função: 2.
+
+
+function moda (a) {
+    let contagem = [], tempRepeticao, repetidos =0, tempIndice, indice;
+    a.forEach((x) => {
+        contagem[x] = (contagem[x] || 0) +1;
+        
+    });
+    for (let index = 0; index <contagem.length -1; index +=1) { 
+        if ( contagem[index] > contagem[index+1]){
+            tempRepeticao = contagem[index];
+            tempIndice = index;
+        } else {
+            tempRepeticao = contagem[index +1];
+            tempIndice = index +1;
+        }
+        if (tempRepeticao > repetidos) {
+            repetidos = tempRepeticao;
+            indice = tempIndice
+        }
+    }
+    return indice;
+}
+
