@@ -114,3 +114,40 @@ function moda (a) {
     return indice;
 }
 
+// 6 - Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+// Valor de teste: N = 5.
+// Valor esperado no retorno da função: 1+2+3+4+5 = 15.
+
+function somanaturais(a) {
+    let resultadoString = '';
+    let resultado = 0;
+    for (let index = 1; index <= a; index +=1) {
+        resultadoString += index;
+        resultado += index;
+        if (index == a) {
+            resultadoString += '='
+        } else{
+            resultadoString += '+'
+        }
+    }
+    return console.log(resultadoString + resultado );
+}
+
+// 7 - Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
+
+function acharString(word, ending) {
+    let resultado = false;
+    let palavra = word.split('').reverse();
+    let final = ending.split('').reverse();
+    for (let index =0; index < final.length; index +=1) {
+        if ( palavra[index] == final[index]) {
+            resultado = true;
+        } else {
+            resultado = false;
+            break;
+        }
+    }
+return resultado
+}
+
+
