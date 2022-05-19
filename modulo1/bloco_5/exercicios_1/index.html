@@ -54,12 +54,40 @@
         5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
         6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
-       document.getElementsByTagName('p')[1].innerText = 'Programador FullStack';
-       document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
-       document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
-       document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
-       document.getElementsByTagName('p')[0].style.textTransform = 'uppercase';
+       let a = document.getElementsByTagName('p');
+       function changeText () { 
+         for (let index = 0; index < a.length; index += 1) {
+           a[index].innerText = 'Programador FullStack';
+         }
+       }
+
+       function changeCenterBackground() {
+         document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
+       }
+       function changeMainBackground () {
+         document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
+       }
+       function corretcTitle () {
+         document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
+       }
+       function uppercase (a) {
+         c = document.getElementsByTagName(a);
+         for (let index = 0; index < c.length; index += 1) {
+           c[index].style.textTransform = 'uppercase';           
+         }         
+       }
        
+       function imprimeParagrafo () { 
+       }
+       changeText();
+       imprimeParagrafo();
+       changeCenterBackground();
+       changeMainBackground();
+       corretcTitle();
+       uppercase('p');
+       
+
+
     </script>
   </body>
 </html>
