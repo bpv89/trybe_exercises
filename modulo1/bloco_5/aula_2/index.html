@@ -21,27 +21,38 @@
       </main>
 
     <script>
-       let a = document.getElementById('elementoOndeVoceEsta').parentElement;
+    //    let a = document.getElementById('elementoOndeVoceEsta').parentElement;
     //    console.log(a);
-       a.style.backgroundColor = 'red';
-       document.getElementById('primeiroFilhoDoFilho').innerText = 'Bom dia';
-       let b = document.getElementById('pai').firstChild;
-       console.log(b); 
-       let c = document.getElementById('elementoOndeVoceEsta').parentElement;
-       let d = document.createElement('h1');
-       d.innerText = 'Olha lá!';
-       c.appendChild(d);
-       let e = document.getElementById('elementoOndeVoceEsta');
-       let f = document.createElement('h1');
-       f.innerText = 'Olha lá!';
-       e.appendChild(f);
-       let g = document.getElementById('primeiroFilhoDoFilho');
-       let h = document.createElement('h1');
-       h.innerText = 'Olha lá!';
-       h.setAttribute('id', 'primeiroNeto');
-       g.appendChild(h);
-       console.log(h.parentElement.parentElement.nextSibling);
+    //    a.style.backgroundColor = 'red';
+    //    document.getElementById('primeiroFilhoDoFilho').innerText = 'Bom dia';
+    //    let b = document.getElementById('pai').firstChild;
+    //    console.log(b); 
+    //    let c = document.getElementById('elementoOndeVoceEsta').parentElement;
+    //    let d = document.createElement('h1');
+    //    d.innerText = 'Olha lá!';
+    //    c.appendChild(d);
+    //    let e = document.getElementById('elementoOndeVoceEsta');
+    //    let f = document.createElement('h1');
+    //    f.innerText = 'Olha lá!';
+    //    e.appendChild(f);
+    //    let g = document.getElementById('primeiroFilhoDoFilho');
+    //    let h = document.createElement('h1');
+    //    h.innerText = 'Olha lá!';
+    //    h.setAttribute('id', 'primeiroNeto');
+    //    g.appendChild(h);
+    //    console.log(h.parentElement.parentElement.nextSibling);
+    let a = document.getElementById('pai');
 
+    for (let index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+        const currentChildren = pai.childNodes[index];
+        if (currentChildren.id !== 'elementoOndeVoceEsta') {
+            currentChildren.remove();
+        }
+    }
+
+    const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+    segundoEUltimoFilhoDoFilho.remove();
+        
 
     </script>
 </body>
