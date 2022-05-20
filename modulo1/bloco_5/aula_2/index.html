@@ -27,6 +27,22 @@
        document.getElementById('primeiroFilhoDoFilho').innerText = 'Bom dia';
        let b = document.getElementById('pai').firstChild;
        console.log(b); 
+       let c = document.getElementById('elementoOndeVoceEsta').parentElement;
+       let d = document.createElement('h1');
+       d.innerText = 'Olha lá!';
+       c.appendChild(d);
+       let e = document.getElementById('elementoOndeVoceEsta');
+       let f = document.createElement('h1');
+       f.innerText = 'Olha lá!';
+       e.appendChild(f);
+       let g = document.getElementById('primeiroFilhoDoFilho');
+       let h = document.createElement('h1');
+       h.innerText = 'Olha lá!';
+       h.setAttribute('id', 'primeiroNeto');
+       g.appendChild(h);
+       console.log(h.parentElement.parentElement.nextSibling);
+
+
     </script>
 </body>
 </html>
