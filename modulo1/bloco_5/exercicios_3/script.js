@@ -97,7 +97,25 @@ botaoSexta.addEventListener('click', function () {
     } 
 });
 
+let diasDoMes = document.querySelectorAll('.days');
+
+// diasDoMes.addEventListener('mouseover', function(event) {
+//     event.target.style.backgroundColor = 'red';
+// });
 
 
+function addTask (a) {
+    let b = document.createElement('span');
+    let c = document.querySelector('.my-tasks');
+    b.innerText = a;
+    c.appendChild(b);
+}
+
+function addTaskColor (a) {
+    let b = document.createElement('div');
+    let c = document.querySelector('.my-tasks');
+    b.style.backgroundColor = a;
+    c.appendChild(b);
+}
 
 // Escreva seu código abaixo.
