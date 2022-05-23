@@ -82,76 +82,91 @@ function sextaFeira(sexta) {
   pai.appendChild(button);
 }
 
-sextaFeira('Sexta-feira');
+sextaFeira("Sexta-feira");
 
 // Modificar a sexta
-let botaoSexta = document.querySelector('#btn-friday');
-botaoSexta.addEventListener('click', function () {
-    let sextou = document.querySelectorAll('.friday');
-    for (let i = 0; i < sextou.length; i += 1) {
-        if (sextou[i].innerText !== 'SEXTOU') {
-            sextou[i].innerText = 'SEXTOU'
-        } else {
-            sextou[i].innerText = sextou[i].nextElementSibling.innerText -1
-        }
-    } 
-});
-
-let diasDoMes = document.querySelector('#days');
-
-diasDoMes.addEventListener('mouseover', function(event) {
-    event.target.style.fontSize = '30px';
-    event.target.style.fontWeight = '600';
-});
-
-diasDoMes.addEventListener('mouseout', function(event) {
-    event.target.style.fontSize = '20px';
-    event.target.style.fontWeight = '200';
-});
-
-
-function addTask (a) {
-    let b = document.createElement('span');
-    let c = document.querySelector('.my-tasks');
-    b.innerText = a;
-    c.appendChild(b);
-}
-
-function addTaskColor (a) {
-    let b = document.createElement('div');
-    let c = document.querySelector('.my-tasks');
-    b.style.backgroundColor = a;
-    b.className = 'task'
-    c.appendChild(b);
-}
-
-function selectTask () {
-    
-}
-
-addTask('masfdsafd');
-addTaskColor('red');
-
-
-let selecionarTarefa = document.querySelector('.task');
-selecionarTarefa.addEventListener('click', function (event) {
-    if (event.target.className === 'task') {
-        event.target.className = 'task selected'
+let botaoSexta = document.querySelector("#btn-friday");
+botaoSexta.addEventListener("click", function () {
+  let sextou = document.querySelectorAll(".friday");
+  for (let i = 0; i < sextou.length; i += 1) {
+    if (sextou[i].innerText !== "SEXTOU") {
+      sextou[i].innerText = "SEXTOU";
     } else {
-        event.target.className = 'task'
+      sextou[i].innerText = sextou[i].nextElementSibling.innerText - 1;
     }
+  }
 });
 
-diasDoMes.addEventListener('click', function (event) {
-    let a = document.querySelector('.selected')
-    if (a === null) {
-        return;
-    }
-    if (event.target.style.color === a.style.backgroundColor) {
-        event.target.style.color = 'rgb(119,119,119)';
-    } else {
-        event.target.style.color = a.style.backgroundColor;
-    }
+let diasDoMes = document.querySelector("#days");
+
+diasDoMes.addEventListener("mouseover", function (event) {
+  event.target.style.fontSize = "30px";
+  event.target.style.fontWeight = "600";
+});
+
+diasDoMes.addEventListener("mouseout", function (event) {
+  event.target.style.fontSize = "20px";
+  event.target.style.fontWeight = "200";
+});
+
+function addTask(a) {
+  let b = document.createElement("span");
+  let c = document.querySelector(".my-tasks");
+  b.innerText = a;
+  c.appendChild(b);
+}
+
+function addTaskColor(a) {
+  let b = document.createElement("div");
+  let c = document.querySelector(".my-tasks");
+  b.style.backgroundColor = a;
+  b.className = "task";
+  c.appendChild(b);
+}
+
+function selectTask() {}
+
+addTask("masfdsafd");
+addTaskColor("red");
+
+let selecionarTarefa = document.querySelector(".task");
+selecionarTarefa.addEventListener("click", function (event) {
+  if (event.target.className === "task") {
+    event.target.className = "task selected";
+  } else {
+    event.target.className = "task";
+  }
+});
+
+diasDoMes.addEventListener("click", function (event) {
+  let a = document.querySelector(".selected");
+  if (a === null) {
+    return;
+  }
+  if (event.target.style.color === a.style.backgroundColor) {
+    event.target.style.color = "rgb(119,119,119)";
+  } else {
+    event.target.style.color = a.style.backgroundColor;
+  }
 });
 
 // Escreva seu código abaixo.
+let botaoAdd = document.querySelector("#btn-add");
+
+botaoAdd.addEventListener("click", addCompromisso);
+
+function addCompromisso() {
+  let a = document.createElement("li");
+  a.innerText = document.querySelector("#task-input").value;
+  if (document.querySelector("#task-input").value.length < 1) {
+      alert('erro em "ADICIONAR"');
+  }
+  document.querySelector('.task-list').appendChild(a);
+  document.querySelector("#task-input").value = ""
+}
+
+document.querySelector("#task-input").addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        addCompromisso();
+    }
+})
