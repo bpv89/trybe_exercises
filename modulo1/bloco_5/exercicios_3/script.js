@@ -97,11 +97,17 @@ botaoSexta.addEventListener('click', function () {
     } 
 });
 
-let diasDoMes = document.querySelectorAll('.days');
+let diasDoMes = document.querySelector('#days');
 
-// diasDoMes.addEventListener('mouseover', function(event) {
-//     event.target.style.backgroundColor = 'red';
-// });
+diasDoMes.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+});
+
+diasDoMes.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+});
 
 
 function addTask (a) {
@@ -115,7 +121,37 @@ function addTaskColor (a) {
     let b = document.createElement('div');
     let c = document.querySelector('.my-tasks');
     b.style.backgroundColor = a;
+    b.className = 'task'
     c.appendChild(b);
 }
+
+function selectTask () {
+    
+}
+
+addTask('masfdsafd');
+addTaskColor('red');
+
+
+let selecionarTarefa = document.querySelector('.task');
+selecionarTarefa.addEventListener('click', function (event) {
+    if (event.target.className === 'task') {
+        event.target.className = 'task selected'
+    } else {
+        event.target.className = 'task'
+    }
+});
+
+diasDoMes.addEventListener('click', function (event) {
+    let a = document.querySelector('.selected')
+    if (a === null) {
+        return;
+    }
+    if (event.target.style.color === a.style.backgroundColor) {
+        event.target.style.color = 'rgb(119,119,119)';
+    } else {
+        event.target.style.color = a.style.backgroundColor;
+    }
+});
 
 // Escreva seu código abaixo.
