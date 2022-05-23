@@ -34,6 +34,7 @@ function createDaysOfTheWeek() {
   }
   monthDays();
 
+//cria um botão chamado feriado
   function feriados (feriados) {
       let button = document.createElement('button');
       let pai = document.querySelector('.buttons-container');
@@ -42,4 +43,20 @@ function createDaysOfTheWeek() {
       pai.appendChild(button);
   }
   feriados('Feriados');
+
+  // evento no botão feriados
+
+  let botao = document.querySelector('#btn-holiday');
+
+  botao.addEventListener('click', function (){
+    let diasFeriados = document.querySelectorAll('.holiday');
+    for (let index = 0; index < diasFeriados.length; index +=1) {
+        if (diasFeriados[index].style.backgroundColor == "rgb(238, 238, 238)") {
+            diasFeriados[index].style.backgroundColor = 'green';
+        } else {
+            diasFeriados[index].style.backgroundColor = "rgb(238, 238, 238)";
+        }
+    }
+  });
+
   // Escreva seu código abaixo.
