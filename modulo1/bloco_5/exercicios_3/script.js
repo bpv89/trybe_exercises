@@ -15,13 +15,23 @@ function createDaysOfTheWeek() {
 
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
+
+  // Cria a lista dos dias com as classes
   function monthDays () {
       let days = document.getElementById('days');
       for (let index = 0; index < dezDaysList.length; index += 1) {
           let elementDay = document.createElement('li');
-          
+          elementDay.className = 'day';
+          if ((dezDaysList[index + 3] % 7) === 0) {
+              elementDay.className += ' friday';
+          } 
+          if ( dezDaysList[index] === 24 || dezDaysList[index] === 31 || dezDaysList[index] === 25) {
+            elementDay.className += ' holiday';
+          } 
+          elementDay.innerText = dezDaysList[index];
+          days.appendChild(elementDay);
       }
   }
-
+  monthDays();
   
   // Escreva seu código abaixo.
