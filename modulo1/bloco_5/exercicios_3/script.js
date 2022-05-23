@@ -73,6 +73,7 @@ botao.addEventListener("click", function () {
   }
 });
 
+//Criar botão de sexta feira
 function sextaFeira(sexta) {
   let button = document.createElement("button");
   let pai = document.querySelector(".buttons-container");
@@ -82,5 +83,21 @@ function sextaFeira(sexta) {
 }
 
 sextaFeira('Sexta-feira');
+
+// Modificar a sexta
+let botaoSexta = document.querySelector('#btn-friday');
+botaoSexta.addEventListener('click', function () {
+    let sextou = document.querySelectorAll('.friday');
+    for (let i = 0; i < sextou.length; i += 1) {
+        if (sextou[i].innerText !== 'SEXTOU') {
+            sextou[i].innerText = 'SEXTOU'
+        } else {
+            sextou[i].innerText = sextou[i].nextElementSibling.innerText -1
+        }
+    } 
+});
+
+
+
 
 // Escreva seu código abaixo.
