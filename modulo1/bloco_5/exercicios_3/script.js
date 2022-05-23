@@ -33,5 +33,13 @@ function createDaysOfTheWeek() {
       }
   }
   monthDays();
-  
+
+  function feriados (feriados) {
+      let button = document.createElement('button');
+      let pai = document.querySelector('.buttons-container');
+      button.id = 'btn-holiday';
+      button.innerText = feriados;
+      pai.appendChild(button);
+  }
+  feriados('Feriados');
   // Escreva seu código abaixo.
