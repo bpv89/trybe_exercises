@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <fieldset>
+      <form action="" id="formulario">
+        <label for="nome-completo"
+          >Nome:
+          <input
+            type="text"
+            name="nome-completo"
+            id="nome-completo"
+            minlength="10"
+            maxlength="40"
+        /></label>
+        <br />
+        <label for="email"
+          >Email:
+          <input
+            type="email"
+            name="email"
+            id="name"
+            maxlength="50"
+            minlength="10"
+        /></label>
+        <br />
+        <label for="destinos-preferido"
+          ><input
+            type="radio"
+            value="cd"
+            name="destinos-preferido"
+            id="destino1"
+          />
+          Cidade
+        </label>
+        <label for="destinos-preferido"
+          ><input
+            type="radio"
+            value="cp"
+            name="destinos-preferido"
+            id="destino2"
+          />
+          Campo
+        </label>
+        <label for="destinos-preferido"
+          ><input
+            type="radio"
+            value="pr"
+            name="destinos-preferido"
+            id="destino3"
+          />
+          Praia
+        </label>
+        <label for="destinos-preferido"
+          ><input
+            type="radio"
+            value="mo"
+            name="destinos-preferido"
+            id="destino4"
+          />
+          Montanhas
+        </label>
+        <br />
+        <p>
+          Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+          TrybeTrip
+        </p>
+        <textarea name="resposta" id="resposta" cols="50" rows="10"></textarea>
+        <br />
+        <label for="melhor-data"
+          ><input type="date" name="melhor-data" id="melhor-data"
+        /></label>
+        <br />
+        <label for="check1"
+          ><input type="checkbox" name="check1" id="oportunidades" />Gostaria de
+          receber outras incríveis oportunidades oferecidas pela Trybe?</label
+        >
+        <br />
+        <label for="check2"
+          ><input type="checkbox" name="check2" id="imagens" />Concordo que
+          imagens das minhas férias poderão ser usadas na divulgação de
+          concursos futuros.</label
+        >
+        <br />
+        <button type="submit" id="botaoEnviar">Enviar</button>
+        <button id="botaoLimpar">Limpar</button>
+        <script src="/bloco_6/exercicios_1/script.js"></script>
+      </form>
+    </fieldset>
+  </body>
+</html>
