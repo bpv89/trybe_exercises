@@ -2,46 +2,88 @@
  * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * apply a natural box layout model to all elements, but allowing components to change
  */
- html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-  
-  }
-  
-  article {
-  
-  }
-  
-  h1 {
-  
-  }
-  
-  h2 {
-  
-  }
-  
-  img {
-      max-width: 100%;
-  }
-  
-  main {
-  
-  }
-  
-  section {
-  
-  }
-  
-  figure {
-      margin: 0;
-  }
-  
-  figcaption {
-    font-size: .8em;
-  }
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(32, 32, 32);
+  color: beige;
+}
+
+article {
+  padding: 5px;
+}
+
+h1 {
+  font-size: x-large;
+}
+
+h2 {
+  font-size: large;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  border: auto;
+}
+
+section {
+  margin: 30px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+figure {
+    background: black;
+  border-radius: 5px;
+  color: white;
+  margin: 0 0 25px 0;
+  padding: 10px;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.8em;
+}
+@media screen and (min-width: 600px) {
+    body {
+        font-size: x-large;
+        background-color: rgb(133, 64, 64);
+        
+    }
+    figure {
+        width: 45%;
+        margin-right: 4.5%;
+      }
+
+    
+    
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        font-size: x-large;
+        background-color: rgb(66, 62, 62);
+        max-width: 1200px;
+        
+    }
+    h1 {
+        font-size: large;
+    }
+    
+    figure {
+        width: 45%;
+        margin-right: 4.5%;
+      }
+}
