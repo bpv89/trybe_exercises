@@ -1,0 +1,9 @@
+docker ps -aq | xargs docker stop | xargs docker rm
+
+// kill all dockers
+
+docker-compose up -d
+
+docker exec -it api bash
+
+npm install
